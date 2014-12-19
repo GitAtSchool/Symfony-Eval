@@ -1,0 +1,30 @@
+examination_session:
+    path:     /
+    defaults: { _controller: "EsteiAppBundle:ExaminationSession:index" }
+
+examination_session_show:
+    path:     /{id}/show
+    defaults: { _controller: "EsteiAppBundle:ExaminationSession:show" }
+
+examination_session_new:
+    path:     /new
+    defaults: { _controller: "EsteiAppBundle:ExaminationSession:new" }
+
+examination_session_create:
+    path:     /create
+    defaults: { _controller: "EsteiAppBundle:ExaminationSession:create" }
+    requirements: { _method: post }
+
+examination_session_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "EsteiAppBundle:ExaminationSession:edit" }
+
+examination_session_update:
+    path:     /{id}/update
+    defaults: { _controller: "EsteiAppBundle:ExaminationSession:update" }
+    requirements: { _method: post|put }
+
+examination_session_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "EsteiAppBundle:ExaminationSession:delete" }
+    requirements: { _method: post|delete }

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="ExaminationSession" table="examination_session">
+    <indexes>
+      <index name="fk_examination_session_period1_idx" columns="period_id"/>
+      <index name="fk_examination_session_student_class_course1_idx" columns="student_class_course_id"/>
+    </indexes>
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="title" type="string" column="title" length="150" nullable="false"/>
+    <field name="description" type="string" column="description" length="3000" nullable="true"/>
+    <field name="coefficient" type="integer" column="coefficient" nullable="false"/>
+    <field name="createdAt" type="datetime" column="created_at" nullable="false"/>
+    <field name="updatedAt" type="datetime" column="updated_at" nullable="false"/>
+    <many-to-one field="studentClassCourse" target-entity="StudentClassCourse">
+      <join-columns>
+        <join-column name="student_class_course_id" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="period" target-entity="Period">
+      <join-columns>
+        <join-column name="period_id" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

@@ -1,0 +1,30 @@
+sex:
+    path:     /
+    defaults: { _controller: "EsteiAppBundle:Sex:index" }
+
+sex_show:
+    path:     /{id}/show
+    defaults: { _controller: "EsteiAppBundle:Sex:show" }
+
+sex_new:
+    path:     /new
+    defaults: { _controller: "EsteiAppBundle:Sex:new" }
+
+sex_create:
+    path:     /create
+    defaults: { _controller: "EsteiAppBundle:Sex:create" }
+    requirements: { _method: post }
+
+sex_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "EsteiAppBundle:Sex:edit" }
+
+sex_update:
+    path:     /{id}/update
+    defaults: { _controller: "EsteiAppBundle:Sex:update" }
+    requirements: { _method: post|put }
+
+sex_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "EsteiAppBundle:Sex:delete" }
+    requirements: { _method: post|delete }

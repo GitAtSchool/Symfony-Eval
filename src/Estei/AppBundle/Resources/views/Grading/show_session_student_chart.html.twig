@@ -1,0 +1,42 @@
+{% extends 'AppBundle::barchart_layout.html.twig' %}
+
+{% block stylesheets %}
+{{ parent() }}
+<style>
+{% for gradingDetail in entity.gradingDetail %}
+input#f-item1:checked ~ .graph-container > li:nth-child({{ loop.index }}) .bar-inner { height: {{ gradingDetail.percentage }}%; bottom: 0; }
+{% endfor %}
+</style>
+{% endblock %}
+
+{% block body_header %}{{ entity.user.firstName }} {{ entity.user.lastName }} - {{ entity.examinationSession.studentClassCourse.studentClass.nameAbbrev }} - 2014/2015{% endblock %}
+
+{% block body_main %}
+				<span class="button-label">{{ entity.examinationSession.studentClassCourse.course.fullName }} ({{ entity.examinationSession.studentClassCourse.user.firstName|first }}. {{ entity.examinationSession.studentClassCourse.user.lastName }})</span>
+				<span class="button-label">Session d'évaluation : {{ entity.examinationSession }}</span>
+				<span class="button-label">Semestre :</span>
+                <input type="radio" name="fill-graph" id="f-item1" checked="checked" /><label for="f-item1">{{ entity.examinationSession.period.nameAbbrev }}</label>
+                {#<input type="radio" name="fill-graph" id="f-product2" /><label for="f-product2">2</label>#}
+
+                <ul class="graph-container">
+                {% for gradingDetail in entity.gradingDetail %}
+                    <li>
+                        <span>{{ gradingDetail.criterion }}</span>
+                        <div class="bar-wrapper">
+                            <div class="bar-container">
+                                <div class="bar-background"></div>
+                                <div class="bar-inner">{{ gradingDetail.percentage }}</div>
+                                <div class="bar-foreground"></div>
+                            </div>
+                        </div>
+                    </li>
+                {% endfor %}
+                    <li>
+                        <ul class="graph-marker-container">
+                        {% for level in entity.examinationSession.studentClassCourse.course.levelsScale.level %}
+                            <li style="bottom:{{ loop.index0 * 100 / (loop.length - 1) }}%;"><span>{{ level.nameAbbrev }}</span></li>
+                        {% endfor %}
+                        </ul>
+                    </li>
+                </ul>
+{% endblock %}

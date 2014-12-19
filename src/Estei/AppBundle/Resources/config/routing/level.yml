@@ -1,0 +1,30 @@
+level:
+    path:     /
+    defaults: { _controller: "EsteiAppBundle:Level:index" }
+
+level_show:
+    path:     /{id}/show
+    defaults: { _controller: "EsteiAppBundle:Level:show" }
+
+level_new:
+    path:     /new
+    defaults: { _controller: "EsteiAppBundle:Level:new" }
+
+level_create:
+    path:     /create
+    defaults: { _controller: "EsteiAppBundle:Level:create" }
+    requirements: { _method: post }
+
+level_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "EsteiAppBundle:Level:edit" }
+
+level_update:
+    path:     /{id}/update
+    defaults: { _controller: "EsteiAppBundle:Level:update" }
+    requirements: { _method: post|put }
+
+level_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "EsteiAppBundle:Level:delete" }
+    requirements: { _method: post|delete }

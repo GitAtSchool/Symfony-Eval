@@ -1,0 +1,30 @@
+criterion:
+    path:     /
+    defaults: { _controller: "EsteiAppBundle:Criterion:index" }
+
+criterion_show:
+    path:     /{id}/show
+    defaults: { _controller: "EsteiAppBundle:Criterion:show" }
+
+criterion_new:
+    path:     /new
+    defaults: { _controller: "EsteiAppBundle:Criterion:new" }
+
+criterion_create:
+    path:     /create
+    defaults: { _controller: "EsteiAppBundle:Criterion:create" }
+    requirements: { _method: post }
+
+criterion_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "EsteiAppBundle:Criterion:edit" }
+
+criterion_update:
+    path:     /{id}/update
+    defaults: { _controller: "EsteiAppBundle:Criterion:update" }
+    requirements: { _method: post|put }
+
+criterion_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "EsteiAppBundle:Criterion:delete" }
+    requirements: { _method: post|delete }

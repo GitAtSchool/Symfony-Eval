@@ -1,0 +1,69 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Grading</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Comment</th>
+                <td>{{ entity.comment }}</td>
+            </tr>
+            <tr>
+                <th>Createdat</th>
+                <td>{{ entity.createdAt|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Updatedat</th>
+                <td>{{ entity.updatedAt|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Student</th>
+                <td>{{ entity.user.firstName }} {{ entity.user.lastName }}</td>
+            </tr>
+            <tr>
+                <th>Studentclass</th>
+                <td>{{ entity.examinationSession.studentClassCourse.studentClass.nameAbbrev }}</td>
+            </tr>
+            <tr>
+                <th>Course</th>
+                <td>{{ entity.examinationSession.studentClassCourse.course.fullName }}</td>
+            </tr>
+            <tr>
+                <th>Teacher</th>
+                <td>{{ entity.examinationSession.studentClassCourse.user.firstName|first }}. {{ entity.examinationSession.studentClassCourse.user.lastName }}</td>
+            </tr>
+            <tr>
+                <th>Examinationsession</th>
+                <td>{{ entity.examinationSession }}</td>
+            </tr>
+            <tr>
+                <th>Period</th>
+                <td>{{ entity.examinationSession.period }}</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    {% for gradingDetail in entity.gradingDetail %}
+        {{ gradingDetail.criterion }}
+        {{ gradingDetail.percentage }}<br />
+    {% endfor %}
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('grading') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('grading_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}
