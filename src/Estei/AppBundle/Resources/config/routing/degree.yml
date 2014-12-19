@@ -1,0 +1,30 @@
+degree:
+    path:     /
+    defaults: { _controller: "EsteiAppBundle:Degree:index" }
+
+degree_show:
+    path:     /{id}/show
+    defaults: { _controller: "EsteiAppBundle:Degree:show" }
+
+degree_new:
+    path:     /new
+    defaults: { _controller: "EsteiAppBundle:Degree:new" }
+
+degree_create:
+    path:     /create
+    defaults: { _controller: "EsteiAppBundle:Degree:create" }
+    requirements: { _method: post }
+
+degree_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "EsteiAppBundle:Degree:edit" }
+
+degree_update:
+    path:     /{id}/update
+    defaults: { _controller: "EsteiAppBundle:Degree:update" }
+    requirements: { _method: post|put }
+
+degree_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "EsteiAppBundle:Degree:delete" }
+    requirements: { _method: post|delete }

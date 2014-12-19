@@ -1,0 +1,55 @@
+estei_app_user:
+    resource: "@EsteiAppBundle/Resources/config/routing/user.yml"
+    prefix:   /user
+
+estei_app_student_class:
+    resource: "@EsteiAppBundle/Resources/config/routing/studentclass.yml"
+    prefix:   /student_class
+
+estei_app_student_class_course:
+    resource: "@EsteiAppBundle/Resources/config/routing/studentclasscourse.yml"
+    prefix:   /student_class_course
+
+estei_app_sex:
+    resource: "@EsteiAppBundle/Resources/config/routing/sex.yml"
+    prefix:   /sex
+
+estei_app_period:
+    resource: "@EsteiAppBundle/Resources/config/routing/period.yml"
+    prefix:   /period
+
+estei_app_levels_scale:
+    resource: "@EsteiAppBundle/Resources/config/routing/levelsscale.yml"
+    prefix:   /levels_scale
+
+estei_app_level:
+    resource: "@EsteiAppBundle/Resources/config/routing/level.yml"
+    prefix:   /level
+
+estei_app_grading:
+    resource: "@EsteiAppBundle/Resources/config/routing/grading.yml"
+    prefix:   /grading
+
+estei_app_grading_detail:
+    resource: "@EsteiAppBundle/Resources/config/routing/gradingdetail.yml"
+    prefix:   /grading_detail
+
+estei_app_examination_session:
+    resource: "@EsteiAppBundle/Resources/config/routing/examinationsession.yml"
+    prefix:   /examination_session
+
+estei_app_degree:
+    resource: "@EsteiAppBundle/Resources/config/routing/degree.yml"
+    prefix:   /degree
+
+estei_app_criterion:
+    resource: "@EsteiAppBundle/Resources/config/routing/criterion.yml"
+    prefix:   /criterion
+
+estei_app_course:
+    resource: "@EsteiAppBundle/Resources/config/routing/course.yml"
+    prefix:   /course
+
+estei_app_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: EsteiAppBundle:Default:index }

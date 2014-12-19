@@ -1,0 +1,30 @@
+student_class_course:
+    path:     /
+    defaults: { _controller: "EsteiAppBundle:StudentClassCourse:index" }
+
+student_class_course_show:
+    path:     /{id}/show
+    defaults: { _controller: "EsteiAppBundle:StudentClassCourse:show" }
+
+student_class_course_new:
+    path:     /new
+    defaults: { _controller: "EsteiAppBundle:StudentClassCourse:new" }
+
+student_class_course_create:
+    path:     /create
+    defaults: { _controller: "EsteiAppBundle:StudentClassCourse:create" }
+    requirements: { _method: post }
+
+student_class_course_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "EsteiAppBundle:StudentClassCourse:edit" }
+
+student_class_course_update:
+    path:     /{id}/update
+    defaults: { _controller: "EsteiAppBundle:StudentClassCourse:update" }
+    requirements: { _method: post|put }
+
+student_class_course_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "EsteiAppBundle:StudentClassCourse:delete" }
+    requirements: { _method: post|delete }

@@ -1,0 +1,30 @@
+levels_scale:
+    path:     /
+    defaults: { _controller: "EsteiAppBundle:LevelsScale:index" }
+
+levels_scale_show:
+    path:     /{id}/show
+    defaults: { _controller: "EsteiAppBundle:LevelsScale:show" }
+
+levels_scale_new:
+    path:     /new
+    defaults: { _controller: "EsteiAppBundle:LevelsScale:new" }
+
+levels_scale_create:
+    path:     /create
+    defaults: { _controller: "EsteiAppBundle:LevelsScale:create" }
+    requirements: { _method: post }
+
+levels_scale_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "EsteiAppBundle:LevelsScale:edit" }
+
+levels_scale_update:
+    path:     /{id}/update
+    defaults: { _controller: "EsteiAppBundle:LevelsScale:update" }
+    requirements: { _method: post|put }
+
+levels_scale_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "EsteiAppBundle:LevelsScale:delete" }
+    requirements: { _method: post|delete }

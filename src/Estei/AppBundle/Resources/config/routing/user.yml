@@ -1,0 +1,30 @@
+user:
+    path:     /
+    defaults: { _controller: "EsteiAppBundle:User:index" }
+
+user_show:
+    path:     /{id}/show
+    defaults: { _controller: "EsteiAppBundle:User:show" }
+
+user_new:
+    path:     /new
+    defaults: { _controller: "EsteiAppBundle:User:new" }
+
+user_create:
+    path:     /create
+    defaults: { _controller: "EsteiAppBundle:User:create" }
+    requirements: { _method: post }
+
+user_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "EsteiAppBundle:User:edit" }
+
+user_update:
+    path:     /{id}/update
+    defaults: { _controller: "EsteiAppBundle:User:update" }
+    requirements: { _method: post|put }
+
+user_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "EsteiAppBundle:User:delete" }
+    requirements: { _method: post|delete }

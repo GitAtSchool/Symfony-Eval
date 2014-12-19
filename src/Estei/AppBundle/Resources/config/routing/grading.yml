@@ -1,0 +1,30 @@
+grading:
+    path:     /
+    defaults: { _controller: "EsteiAppBundle:Grading:index" }
+
+grading_show:
+    path:     /{id}/show
+    defaults: { _controller: "EsteiAppBundle:Grading:show" }
+
+grading_new:
+    path:     /new
+    defaults: { _controller: "EsteiAppBundle:Grading:new" }
+
+grading_create:
+    path:     /create
+    defaults: { _controller: "EsteiAppBundle:Grading:create" }
+    requirements: { _method: post }
+
+grading_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "EsteiAppBundle:Grading:edit" }
+
+grading_update:
+    path:     /{id}/update
+    defaults: { _controller: "EsteiAppBundle:Grading:update" }
+    requirements: { _method: post|put }
+
+grading_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "EsteiAppBundle:Grading:delete" }
+    requirements: { _method: post|delete }
