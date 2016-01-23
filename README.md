@@ -6,4 +6,5 @@
   5. Tell Doctrine to update your database schema
   6. Import the [MySQL test data](src/Estei/AppBundle/Resources/db/sf_eval_data.sql.gz)
 
-  [![Build Status](https://travis-ci.org/Profesor-Bruscia/Symfony-Eval.svg)](https://travis-ci.org/Profesor-Bruscia/Symfony-Eval)
+# Project status
+[![Build Status](https://travis-ci.org/Profesor-Bruscia/Symfony-Eval.svg)](https://travis-ci.org/Profesor-Bruscia/Symfony-Eval)
