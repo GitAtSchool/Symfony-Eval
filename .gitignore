@@ -54,3 +54,11 @@ dist/
 nbdist/
 nbactions.xml
 nb-configuration.xml
+
+## JetBrains IDEs (PhpStorm, WebStorm, PyCharm) project files
+
+# IntelliJ IDEA modules
+*.iml
+
+# Project settings folder
+.idea/
