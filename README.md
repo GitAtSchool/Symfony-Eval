@@ -8,4 +8,4 @@
   
 
 # Project status
-[![Build Status](https://travis-ci.org/Profesor-Bruscia/Symfony-Eval.svg)](https://travis-ci.org/Profesor-Bruscia/Symfony-Eval)
+[![Build Status](https://travis-ci.org/GitAtSchool/Symfony-Eval.svg?branch=develop)](https://travis-ci.org/GitAtSchool/Symfony-Eval)
