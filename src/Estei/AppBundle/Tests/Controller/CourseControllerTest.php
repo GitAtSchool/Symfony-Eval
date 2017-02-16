@@ -6,9 +6,11 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 class CourseControllerTest extends WebTestCase
 {
+    /*
     public function testCompleteScenario() {
         $this->markTestIncomplete('This test has not been implemented yet.');
     }
+    */
 
     /*
     public function testCompleteScenario()
